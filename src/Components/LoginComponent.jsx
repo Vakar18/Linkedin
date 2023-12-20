@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { LoginAPI } from "../api/AuthAPI";
 import "../Sass/LoginComponent.scss";
 import { toast } from "react-toastify";
+import LinkedinLogo from "../assets/linkedin.png"
 
 export default function LoginComponent() {
   const [credentails, setCredentials] = useState({});
@@ -19,7 +20,7 @@ export default function LoginComponent() {
 
   return (
     <div className="login-wrapper">
-      {/* <img src={LinkedinLogo} className="linkedinLogo" /> */}
+      <img src={LinkedinLogo} className="linkedinLogo" />
 
       <div className="login-wrapper-inner">
         <h1 className="heading">Sign in</h1>
