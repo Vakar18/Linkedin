@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { LoginAPI , GoogleSignInAPI} from "../api/AuthAPI";
+import { LoginAPI } from "../api/AuthAPI";
 import "../Sass/LoginComponent.scss";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import LinkedinLogo from "../assets/linkedin.png"
-import GoogleButton from 'react-google-button'
 
 export default function LoginComponent() {
   let navigate = useNavigate();
@@ -21,11 +20,6 @@ export default function LoginComponent() {
       toast.error("Please Check your Credentials")
     }
   };
-
-const googleSignIn = () => {
-  let res = GoogleSignInAPI()
-  console.log(res)
-}
 
   return (
     <>
@@ -58,7 +52,6 @@ const googleSignIn = () => {
         </button>
         <hr className="hr-text" data-content="or" />
         <div className="google-btn-container">
-          <GoogleButton className="google-btn" onClick={googleSignIn}/>
         <p className="go-to-signup">
           New to LinkedIn?{" "}
           <span className="join-now" onClick={() => navigate("/register")}>

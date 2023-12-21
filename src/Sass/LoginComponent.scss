@@ -29,7 +29,7 @@ body {
   
 
 .login-wrapper {
-    background-color: white !important;
+    background-color:rgb(224, 224, 224,0.9) !important;
     height: 100vh;
     width: 100vw;
      display: flex;
@@ -41,7 +41,7 @@ body {
       height: 80vh;
       width: 50vw;
       border-radius: 10px;
-      background-color: rgb(224, 224, 224,0.9);
+      background-color: white;
       display: flex;
       flex-direction: column;
       justify-content: center;
