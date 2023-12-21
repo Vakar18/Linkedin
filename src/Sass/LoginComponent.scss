@@ -1,5 +1,5 @@
 $linkedinBlue1: #0072b1;
-$linkedinBlue2: #0380c4;
+$linkedinBlue2: #0073b1;
 $linkedinBlue3: #03689e;
 
 body {
@@ -11,7 +11,7 @@ body {
     width: 300px;
   height: 50px;
   cursor: pointer;
-  background-color: $linkedinBlue2;
+  background-color: $linkedinBlue1;
   border-radius: 30px;
   outline: none;
   border: none;
@@ -31,7 +31,17 @@ body {
 .login-wrapper {
     background-color: white !important;
     height: 100vh;
+    width: 100vw;
+     display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
     .login-wrapper-inner {
+      height: 80vh;
+      width: 50vw;
+      border-radius: 10px;
+      background-color: rgb(224, 224, 224,0.9);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -44,7 +54,7 @@ body {
       }
     
       .sub-heading {
-        margin-top: -20px;
+        margin-top: -10px;
         font-family: system-ui;
       }
 }
@@ -57,7 +67,61 @@ body {
   }
 
   .linkedinLogo {
+    position: absolute;
     width: 60px;
-    margin: 15px;
-    padding: 15px;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .hr-text {
+    line-height: 1em;
+    position: relative;
+    outline: 0;
+    border: 0;
+    color: black;
+    text-align: center;
+    height: 1.5em;
+    opacity: 0.5;
+    &:before {
+      content: "";
+      // use the linear-gradient for the fading effect
+      // use a solid background color for a solid bar
+      background: linear-gradient(to right, transparent, rgba(224, 224, 224, 0.9), transparent);
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      height: 1px;
+    }
+    &:after {
+      content: attr(data-content);
+      position: relative;
+      display: inline-block;
+      color: black;
+  
+      padding: 0 0.5em;
+      line-height: 1.5em;
+      // this is really the only tricky part, you need to specify the background color of the container element...
+      color: #0a0a0a;
+      background-color: rgb(224, 224, 224,0.9);
+    }
+  }
+
+  .google-btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   border-radius: 10px !important; 
+  
+    .go-to-signup {
+      font-size: 18px;
+    }
+  
+    .join-now {
+      color: $linkedinBlue1;
+      font-family: system-ui;
+      cursor: pointer;
+      font-size: 18px;
+    }
   }
